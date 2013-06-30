@@ -7,7 +7,7 @@ PHPID=$1
 [ -d "/opt/php/$PHPID" ] || { echo "PHP folder not found (/opt/php/$PHPID)"; exit 1; }
 
 cat << EOF > /etc/httpd/conf.d/php.conf
-LoadModule php5_module /opt/php/php-5.3.26/lib/httpd/modules/libphp5.so
+LoadModule php5_module /opt/php/$PHPID/lib/httpd/modules/libphp5.so
 
 AddHandler php5-script .php
 AddType text/html .php
