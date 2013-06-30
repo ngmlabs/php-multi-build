@@ -1,0 +1,4 @@
+- copy php ini for current PHP version
+- strip php binaries
+- http://stackoverflow.com/questions/407523/escape-a-string-for-sed-search-pattern
+- make switch-php.sh show a list of compiled php versions
