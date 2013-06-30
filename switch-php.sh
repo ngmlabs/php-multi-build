@@ -14,3 +14,10 @@ AddType text/html .php
 
 DirectoryIndex index.php
 EOF
+
+echo "Restarting httpd service..."
+service httpd restart
+
+echo "Switching to new CLI version of PHP..."
+[ -h /usr/local/bin/php ] && rm -f /usr/local/bin/php
+ln -vs /opt/php/$PHPID/bin/php /usr/local/bin/php
